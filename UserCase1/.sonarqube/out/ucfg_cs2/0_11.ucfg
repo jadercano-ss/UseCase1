@@ -1,0 +1,34 @@
+
+5UserCase1.Controllers.WeatherForecastController.Get()R
+HC:\SoftServe\UseCase1\UserCase1\Controllers\WeatherForecastController.cs( (+"2*Ô
+0 (	”
+‘
+ (%/
+%0)System.Collections.Generic.IEnumerable<T>"&System.Linq.Enumerable.Range(int, int)*"
+System.Linq.Enumerable*2*2œ
+™
+ (
+/
+%1)System.Collections.Generic.IEnumerable<T>"System.Linq.Enumerable.Select<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TResult>)*"
+System.Linq.Enumerable*31
+/
+%0)System.Collections.Generic.IEnumerable<T>*
+""Ý
+Ú
+ (!
+%2UserCase1.WeatherForecast[]"XSystem.Linq.Enumerable.ToArray<TSource>(System.Collections.Generic.IEnumerable<TSource>)*"
+System.Linq.Enumerable*31
+/
+%1)System.Collections.Generic.IEnumerable<T>"/
+ (#
+!
+%2UserCase1.WeatherForecast[]*.
+1 ("
+ (
+implicit return*4
+2- (- 
+
+( (+
+%3"__entrypoint*
+0B31
+/UserCase1.Controllers.WeatherForecastController

@@ -1,0 +1,11 @@
+±
+UserCase1.WeatherForecastobject@
+WeatherForecast()+UserCase1.WeatherForecast.WeatherForecast().
+Date.get"UserCase1.WeatherForecast.Date.get.
+Date.set"UserCase1.WeatherForecast.Date.set>
+TemperatureC.get*UserCase1.WeatherForecast.TemperatureC.get>
+TemperatureC.set*UserCase1.WeatherForecast.TemperatureC.set>
+TemperatureF.get*UserCase1.WeatherForecast.TemperatureF.get>
+TemperatureF.set*UserCase1.WeatherForecast.TemperatureF.set4
+Summary.get%UserCase1.WeatherForecast.Summary.get4
+Summary.set%UserCase1.WeatherForecast.Summary.set

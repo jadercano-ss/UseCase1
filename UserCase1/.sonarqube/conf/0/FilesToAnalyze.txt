@@ -1,0 +1,13 @@
+﻿C:\SoftServe\UseCase1\UserCase1\Controllers\WeatherForecastController.cs
+C:\SoftServe\UseCase1\UserCase1\Program.cs
+C:\SoftServe\UseCase1\UserCase1\WeatherForecast.cs
+C:\SoftServe\UseCase1\UserCase1\obj\Debug\net6.0\UserCase1.GlobalUsings.g.cs
+C:\SoftServe\UseCase1\UserCase1\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\SoftServe\UseCase1\UserCase1\obj\Debug\net6.0\UserCase1.AssemblyInfo.cs
+C:\SoftServe\UseCase1\UserCase1\obj\Debug\net6.0\UserCase1.MvcApplicationPartsAssemblyInfo.cs
+C:\SoftServe\UseCase1\UserCase1\appsettings.Development.json
+C:\SoftServe\UseCase1\UserCase1\appsettings.json
+C:\SoftServe\UseCase1\UserCase1\package-lock.json
+C:\SoftServe\UseCase1\UserCase1\package.json
+C:\SoftServe\UseCase1\UserCase1\sonar-scanner.properties
+C:\SoftServe\UseCase1\UserCase1\Properties\launchSettings.json
