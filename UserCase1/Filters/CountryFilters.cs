@@ -47,5 +47,17 @@ namespace UserCase1.Filters
 
             return countries;
         }
+
+        public static IEnumerable<Country> FilterByLimit(
+            this IEnumerable<Country> countries,
+            int? limit)
+        {
+            if (limit.HasValue)
+            {
+                countries = countries.Take(limit.Value);
+            }
+
+            return countries;
+        }
     }
 }

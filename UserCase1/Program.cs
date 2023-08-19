@@ -21,7 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/countries", async (string? name, int? population, string? sortBy) =>
+app.MapGet("/countries", async (string? name, int? population, string? sortBy, int? limit) =>
 {
     using var httpClient = new HttpClient();
     var response = await httpClient.GetAsync("https://restcountries.com/v3.1/all");
@@ -36,7 +36,8 @@ app.MapGet("/countries", async (string? name, int? population, string? sortBy) =
     var countries = allCountries?
             .FilterByName(name)
             .FilterByPopulation(population)
-            .SortByName(sortBy);
+            .SortByName(sortBy)
+            .FilterByLimit(limit);
 
     return Results.Ok(countries);
 });
