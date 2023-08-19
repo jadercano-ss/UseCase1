@@ -17,11 +17,11 @@ namespace UserCase1.Filters
         }
         public static IEnumerable<Country> FilterByPopulation(
             this IEnumerable<Country> countries,
-            long? population)
+            int? population)
         {
             if (population.HasValue)
             {
-                countries = countries.Where(c => c.Population >= population);
+                countries = countries.Where(c => c.Population < population * 1000000);
             }
 
             return countries;

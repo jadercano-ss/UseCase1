@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/countries", async (string? name, long? population, string? sortBy) =>
+app.MapGet("/countries", async (string? name, int? population, string? sortBy) =>
 {
     using var httpClient = new HttpClient();
     var response = await httpClient.GetAsync("https://restcountries.com/v3.1/all");
