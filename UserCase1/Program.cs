@@ -1,7 +1,6 @@
 using System.Text.Json;
 using UserCase1.Filters;
 using UserCase1.Models;
-using UserCase1.Models.Enums;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,3 +42,6 @@ app.MapGet("/countries", async (string? name, int? population, string? sortBy, i
 });
 
 app.Run();
+
+public partial class Program
+{ }
