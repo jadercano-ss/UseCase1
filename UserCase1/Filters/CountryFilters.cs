@@ -10,7 +10,7 @@ namespace UserCase1.Filters
         {
             if (!string.IsNullOrEmpty(name))
             {
-                countries = countries.Where(c => c.Name.Common.Contains(name, StringComparison.OrdinalIgnoreCase));
+                countries = countries.Where(c => c.Name.Common.Trim().Contains(name.Trim(), StringComparison.OrdinalIgnoreCase));
             }
 
             return countries;
