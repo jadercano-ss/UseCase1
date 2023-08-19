@@ -1,6 +1,7 @@
 using System.Text.Json;
 using UserCase1.Filters;
 using UserCase1.Models;
+using UserCase1.Models.Enums;
 
 var builder = WebApplication.CreateBuilder(args);
 

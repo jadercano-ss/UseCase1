@@ -1,4 +1,5 @@
 ﻿using UserCase1.Models;
+using UserCase1.Models.Enums;
 
 namespace UserCase1.Filters
 {
@@ -31,17 +32,16 @@ namespace UserCase1.Filters
             this IEnumerable<Country> countries,
             string? sortBy)
         {
-            if (!string.IsNullOrEmpty(sortBy))
+            if (!string.IsNullOrWhiteSpace(sortBy) && Enum.TryParse<SortBy>(sortBy.Trim(), true, out SortBy sortByValue))
             {
-                switch (sortBy.Trim().ToLower())
+                switch (sortByValue)
                 {
-                    case "name":
+                    case SortBy.ascend:
                         countries = countries.OrderBy(c => c.Name.Common);
                         break;
-                    case "population":
-                        countries = countries.OrderBy(c => c.Population);
+                    case SortBy.descend:
+                        countries = countries.OrderByDescending(c => c.Name.Common);
                         break;
-                        // Add more sort options if needed
                 }
             }
 
