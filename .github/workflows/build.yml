@@ -44,6 +44,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"jadercano-ss_use-case-1" /o:"jadercano-ss" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet clean
-          dotnet build
+          dotnet clean .\UserCase1\UserCase1.sln
+          dotnet build .\UserCase1\UserCase1.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
