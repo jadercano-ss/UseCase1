@@ -3,6 +3,7 @@ using UserCase1.Filters;
 using UserCase1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var countriesUrl = builder.Configuration.GetValue<string>("CountriesUrl");
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,7 +24,7 @@ app.UseHttpsRedirection();
 app.MapGet("/countries", async (string? name, int? population, string? sortBy, int? limit) =>
 {
     using var httpClient = new HttpClient();
-    var response = await httpClient.GetAsync("https://restcountries.com/v3.1/all");
+    var response = await httpClient.GetAsync(countriesUrl);
     response.EnsureSuccessStatusCode();
 
     var jsonString = await response.Content.ReadAsStringAsync();

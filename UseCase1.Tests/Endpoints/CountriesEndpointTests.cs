@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Text.Json;
+using System.Xml.Linq;
 using UserCase1.Models;
 
 namespace UseCase1.Tests.Endpoints
@@ -31,10 +32,12 @@ namespace UseCase1.Tests.Endpoints
 
             // Act
             var response = await _client.GetAsync(requestUri);
+            var content = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<IEnumerable<Country>>(content);
 
             // Assert
             response.EnsureSuccessStatusCode();
-            // ... Further assertions based on default behavior without params
+            Assert.IsTrue(result?.Any());
         }
 
         [TestMethod]
@@ -161,9 +164,17 @@ namespace UseCase1.Tests.Endpoints
 
             // Act
             var response = await _client.GetAsync(requestUri);
+            var content = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<IEnumerable<Country>>(content);
+
+            var defaultResponse = _client.GetAsync(requestUri);
+            var defaultContent = await response.Content.ReadAsStringAsync();
+            var defaultResult = JsonSerializer.Deserialize<IEnumerable<Country>>(defaultContent);
 
             // Assert
             response.EnsureSuccessStatusCode();
+            Assert.AreEqual<Country?>(defaultResult?.First(), result?.First());
+            Assert.AreEqual<Country?>(defaultResult?.Last(), result?.Last());
         }
     }
 
